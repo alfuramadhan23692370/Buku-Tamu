@@ -1,10 +1,4 @@
 <?php
 
-// Buat folder cache otomatis di direktori /tmp milik Vercel
-use Illuminate\Foundation\Application;
-
-if (!file_exists('/tmp/bootstrap/cache')) {
-    mkdir('/tmp/bootstrap/cache', 0755, true);
-}
-
+// Mengarahkan Vercel untuk membaca file index.php bawaan Laravel yang ada di folder public
 require __DIR__ . '/../public/index.php';
